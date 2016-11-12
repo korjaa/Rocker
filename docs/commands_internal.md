@@ -7,7 +7,7 @@
     * `RUN` - executes command with WORKDIR set as the active working directory
       * add image specific scripts to search path?
       * (idea) if Rockerfile folder contains `scripts` or `bin` folder, add it to search path
-    * `ADD` something from `Rockerfile` folder to `abs/path/` destination
+    * `ADD` - add something from `Rockerfile` folder to `abs/path/` destination
       * folder support
       * `wget` support
       * `git` support (with or without .git folder)
@@ -36,4 +36,12 @@
 
 ### Problems ###
 * Where to host/get latest images?
+  * Just `wget` it to some local common Rocker directory?
 * Where to host/get image specific set scripts
+  * From this repo?
+  ```apache
+  /Rocker/data/scripts/noobs_2.0.0/
+  /Rocker/data/scripts/raspbian_jessie/
+  /Rocker/data/scripts/raspbian_jessie_lite/
+  
+  ```
