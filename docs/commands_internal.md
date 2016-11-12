@@ -2,7 +2,19 @@
   1. Open `Rockerfile`
   1. Figure out base image and create copy of it with the given new image name
   1. Mount copy image's data partion somewhere
-  1. Execute RUN and ADD commands to it
+  1. Follow `Rockerfile`
+    * `WORKDIR` - sets the active workdir on the image
+    * `RUN` - executes command with WORKDIR set as the active working directory
+      * add image specific scripts to search path?
+      * (idea) if Rockerfile folder contains `scripts` or `bin` folder, add it to search path
+    * `ADD` something from `Rockerfile` folder to `abs/path/` destination
+      * folder support
+      * `wget` support
+      * `git` support (with or without .git folder)
+      * `tar.gz` support
+      * `zip, 7z` support,
+      * or, just `unp` it?
+    * `ENTRYPOINT` - adds given command to cronfile with tag @reboot
   1. Done, unmount
   
 ### Command `rocker flash <image> [<device>]` ###
@@ -20,3 +32,8 @@
   1. Flash
     1. **Linux**, run a dd command
     1. **Windows**, no idea, open instance of Win32DiskImager?
+
+
+### Problems ###
+* Where to host/get latest images?
+* Where to host/get image specific set scripts
